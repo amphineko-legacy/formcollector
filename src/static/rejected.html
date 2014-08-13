@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Commit Rejected!</title>
+        <meta charset="utf-8" />
+        <style>
+            * { font-family: "微软雅黑", "Trebuchet MS", Roboto, arial, sans-serif; margin: 0; padding: 0; }
+            body { padding: 16px; }
+            h1 { border-bottom: 1px solid #DFDFDF; color: #555; display: block; font-size: 32px; font-weight: 300; line-height: 36px; margin: 24px 0; padding: 0; }
+            blockquote { border-left: 4px solid #DADADA; color: #525252; font-size: 1em; line-height: 2em; margin-left: 16px; padding: 16px; }
+            blockquote b.red { color: red; }
+            blockquote b.grey { color: grey; }
+        </style>
+    </head>
+    <body>
+        <h1>PostForm Logger</h1>
+        <blockquote>
+            <b class="red">ERROR: </b>Sorry, we cannot accept the form you committed.<br />
+            {% if reason %}<b class="grey">Reason: </b>{{ escape(reason) }}{% end %}
+        </blockquote>
+    </body>
+</html>
